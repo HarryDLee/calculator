@@ -23,6 +23,8 @@
 		CE19A96F175B6820006DB9E9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE19A94A175B6820006DB9E9 /* Foundation.framework */; };
 		CE19A977175B6820006DB9E9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE19A975175B6820006DB9E9 /* InfoPlist.strings */; };
 		CE19A97A175B6820006DB9E9 /* caculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE19A979175B6820006DB9E9 /* caculatorTests.m */; };
+		CE19A985175B8842006DB9E9 /* osCaculateBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = CE19A984175B8842006DB9E9 /* osCaculateBrain.m */; };
+		CE19A986175B8842006DB9E9 /* osCaculateBrain.m in Sources */ = {isa = PBXBuildFile; fileRef = CE19A984175B8842006DB9E9 /* osCaculateBrain.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		CE19A976175B6820006DB9E9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE19A978175B6820006DB9E9 /* caculatorTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = caculatorTests.h; sourceTree = "<group>"; };
 		CE19A979175B6820006DB9E9 /* caculatorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = caculatorTests.m; sourceTree = "<group>"; };
+		CE19A983175B8842006DB9E9 /* osCaculateBrain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = osCaculateBrain.h; sourceTree = "<group>"; };
+		CE19A984175B8842006DB9E9 /* osCaculateBrain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = osCaculateBrain.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,8 @@
 				CE19A957175B6820006DB9E9 /* osAppDelegate.h */,
 				CE19A958175B6820006DB9E9 /* osAppDelegate.m */,
 				CE19A960175B6820006DB9E9 /* MainStoryboard.storyboard */,
+				CE19A983175B8842006DB9E9 /* osCaculateBrain.h */,
+				CE19A984175B8842006DB9E9 /* osCaculateBrain.m */,
 				CE19A963175B6820006DB9E9 /* osViewController.h */,
 				CE19A964175B6820006DB9E9 /* osViewController.m */,
 				CE19A94F175B6820006DB9E9 /* Supporting Files */,
@@ -274,6 +280,7 @@
 				CE19A955175B6820006DB9E9 /* main.m in Sources */,
 				CE19A959175B6820006DB9E9 /* osAppDelegate.m in Sources */,
 				CE19A965175B6820006DB9E9 /* osViewController.m in Sources */,
+				CE19A985175B8842006DB9E9 /* osCaculateBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE19A97A175B6820006DB9E9 /* caculatorTests.m in Sources */,
+				CE19A986175B8842006DB9E9 /* osCaculateBrain.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,7 +356,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -372,7 +380,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -385,6 +393,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "caculator/caculator-Prefix.pch";
 				INFOPLIST_FILE = "caculator/caculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -396,6 +405,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "caculator/caculator-Prefix.pch";
 				INFOPLIST_FILE = "caculator/caculator-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

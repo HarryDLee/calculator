@@ -7,23 +7,50 @@
 //
 
 #import "osViewController.h"
+#import "osCaculateBrain.h"
 
-@interface osViewController ()
+@interface  osViewController()
+@property (nonatomic) BOOL userIsInTheMiddleOfEnteringANumber;
+@property (nonatomic,strong) osCaculateBrain *brain;
 
 @end
 
 @implementation osViewController
 
-- (void)viewDidLoad
-{
-    [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+@synthesize display = _display;
+@synthesize userIsInTheMiddleOfEnteringANumber = _userIsInTheMiddleOfEnteringANumber;
+@synthesize brain = _brain;
+
+- (osCaculateBrain *) brain{
+    if (!_brain) {
+        _brain = [[osCaculateBrain alloc] init];
+    }
+    return _brain;
 }
 
-- (void)didReceiveMemoryWarning
+- (IBAction)digitPressed:(UIButton *)sender
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    NSString *digit = [sender currentTitle];
+    if(self.userIsInTheMiddleOfEnteringANumber){
+        self.display.text = [self.display.text stringByAppendingString:digit];
+    } else{
+        self.display.text = digit;
+        self.userIsInTheMiddleOfEnteringANumber = YES;
+    }
 }
+- (IBAction)operationPressed:(UIButton *)sender {
+    if (self.userIsInTheMiddleOfEnteringANumber) {
+        [self enterPressed];
+    }
+    double result = [self.brain performOperation:sender.currentTitle];
+    NSString *resultString = [NSString stringWithFormat:@"%g",result];
+    self.display.text = resultString;
+}
+
+- (IBAction)enterPressed {
+    [self.brain pushOperand:[self.display.text doubleValue]];
+    self.userIsInTheMiddleOfEnteringANumber = NO;
+}
+
 
 @end
